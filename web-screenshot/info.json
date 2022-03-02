@@ -1,0 +1,104 @@
+{
+  "name": "web-screenshot",
+  "version": "1.0.0",
+  "label": "Web Screenshot",
+  "description": "Native Screenshot Connector",
+  "publisher": "Community",
+  "icon_small_name": "web-screenshot_small.png",
+  "icon_large_name": "web-screenshot_large.png",
+  "cs_approved": false,
+  "cs_compatible": true,
+  "category": "investigation",
+  "help_online": "https://support.google.com/chrome",
+  "configuration": {
+    "fields": [
+      {
+        "title": "path",
+        "required": true,
+        "editable": true,
+        "visible": true,
+        "type": "text",
+        "description": "Chrome binary path",
+        "name": "path",
+        "tooltip": "Set Chrome binary path",
+        "value": "/usr/bin/google-chrome"
+      },
+      {
+        "title": "Width",
+        "required": true,
+        "editable": true,
+        "visible": true,
+        "type": "integer",
+        "description": "Browser Width",
+        "name": "width",
+        "tooltip": "Browser Width",
+        "value": "800"
+      },
+      {
+        "title": "Height",
+        "required": true,
+        "editable": true,
+        "visible": true,
+        "type": "integer",
+        "description": "Browser Height",
+        "name": "height",
+        "tooltip": "Browser Height",
+        "value": "600"
+      },
+      {
+        "title": "Thumbnail Width",
+        "required": true,
+        "editable": true,
+        "visible": true,
+        "type": "integer",
+        "description": "Thumbnail Width",
+        "name": "t_width",
+        "tooltip": "Attachment Thumbnail Width",
+        "value": "800"
+      },
+      {
+        "title": "Thumbnail Height",
+        "required": true,
+        "editable": true,
+        "visible": true,
+        "type": "integer",
+        "description": "Thumbnail Height",
+        "name": "t_height",
+        "tooltip": "Attachment Thumbnail Height",
+        "value": "600"
+      }
+    ]
+  },
+  "operations": [
+    {
+      "operation": "take_screenshot",
+      "title": "Take Screenshot",
+      "description": "Visit URL and take screenshot with Chrome",
+      "category": "investigation",
+      "annotation": "take_screenshot",
+      "parameters": [
+        {
+          "title": "URL",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "url",
+          "description": "URL"
+        }
+      ],
+      "enabled": true,
+      "output_schema": {
+        "@content": "",
+        "@id": "",
+        "@type": "",
+        "name": "",
+        "description": "",
+        "file": {}
+      }
+    }
+  ],
+  "playbooks": [
+    {}
+  ]
+}
